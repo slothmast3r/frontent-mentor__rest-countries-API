@@ -5,17 +5,24 @@
         Where in the world?
       </div>
     </div>
-    <div class="body">
-
+    <div class="body" :class="darkMode ? 'dark' : 'light'">
+      <countries></countries>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
+import Countries from "@/components/Countries.vue";
 
 @Options({
   components: {
+    Countries
+  },
+  data(){
+    return{
+      darkMode: false,
+    }
   },
 })
 export default class App extends Vue {}
@@ -30,5 +37,7 @@ export default class App extends Vue {}
   padding: 1em 3em;
   font-weight: 800;
   font-size: 1.5rem;
+}
+.body{
 }
 </style>
