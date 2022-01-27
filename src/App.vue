@@ -6,18 +6,18 @@
       </div>
     </div>
     <div class="body" :class="darkMode ? 'dark' : 'light'">
-      <countries-layout />
+      <countries></countries>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import CountriesLayout from "@/components/CountriesLayout.vue";
+import Countries from "@/components/Countries.vue";
 
 @Options({
   components: {
-    CountriesLayout
+    Countries
   },
   data(){
     return{
