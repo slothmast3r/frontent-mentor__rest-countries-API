@@ -7,9 +7,8 @@ module.exports = {
         'plugin:vue/vue3-essential',
         '@vue/eslint-config-typescript'
     ],
+    "plugins": ["only-warn"],
     rules: {
         // maybe your other rules...
-
-        "prettier/prettier": "warn"
     }
 }
