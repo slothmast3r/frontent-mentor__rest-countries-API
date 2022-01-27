@@ -1,6 +1,5 @@
-<link rel="stylesheet" href="../../styles/_variables.scss">
 <template>
-  <div>
+  <div class="countries-wrapper">
     <country-card
         v-for="country in countryRepositories"
         :country="country"
@@ -49,6 +48,15 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+@import "styles/_variables.scss";
+
+.countries-wrapper{
+  background: $darkgray-lightMode;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4em;
+
+}
 
 </style>

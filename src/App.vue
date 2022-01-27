@@ -36,7 +36,7 @@ export default class App extends Vue {}
 .header-title{
   padding: 1em 3em;
   font-weight: 800;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 .body{
 }
