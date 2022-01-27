@@ -1,6 +1,6 @@
+<link rel="stylesheet" href="../../styles/_variables.scss">
 <template>
   <div>
-    {{ countryRepositories}}
     <country-card
         v-for="country in countryRepositories"
         :country="country"
@@ -11,22 +11,41 @@
 
 <script>
 
-import {onMounted, reactive, ref} from "vue";
+import {onMounted, ref, watch} from "vue";
 import { fetchAllCountriesRepository } from "../../scripts/repositories";
 import CountryCard from "@/components/CountryCard";
+import { setup } from 'vue-class-component'
 
 export default {
   name: "CountriesLayout",
   components: { CountryCard },
-  async setup() {
-
-    const countryRepositories = ref([])
-    const getCountryRepositories = async () => {
-      countryRepositories.value = await fetchAllCountriesRepository()
+  data(){
+    return{
+      countryRepositories: [],
     }
-    onMounted(getCountryRepositories)
-    return { countryRepositories, getCountryRepositories } // anything returned here will be available for the rest of the component
-  }
+  },
+  async created() {
+    await this.getCountryRepositories()
+  },
+  methods:{
+    async getCountryRepositories() {
+      this.countryRepositories = await fetchAllCountriesRepository()
+    }
+  },
+  // #TODO LEARN HOW TO SETUP
+  // async setup() {
+  //
+  //   const countryRepositories = ref([])
+  //   const getCountryRepositories = async () => {
+  //     countryRepositories.value = await fetchAllCountriesRepository()
+  //   }
+  //   await getCountryRepositories()
+  //   watch(countryRepositories, (newValue)=>{
+  //     countryRepositories.value = newValue
+  //   })
+  //   console.log('cycki')
+  //   return { countryRepositories, getCountryRepositories }
+  // }
 }
 </script>
 

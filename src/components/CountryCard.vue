@@ -1,6 +1,7 @@
 <template>
   <div style="width: 100px; height: 100px; background: red">
-    {{ country }}
+    {{ country.name }}
+
   </div>
 
 </template>

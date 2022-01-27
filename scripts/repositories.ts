@@ -4,5 +4,4 @@ export async function fetchAllCountriesRepository (){
     }).then((res) => {
         return res.json()
     })
-
 }
