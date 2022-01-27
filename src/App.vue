@@ -49,5 +49,7 @@ body{
   }
 }
 .body{
+  padding: 3em 5em;
+  background: $veryLightGray-lightMode;
 }
 </style>
