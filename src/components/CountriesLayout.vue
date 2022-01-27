@@ -54,7 +54,6 @@ export default {
 .countries-wrapper{
   display: flex;
   flex-wrap: wrap;
-  z-index: 0;
   justify-content: space-between;
   gap: 4em;
   position: relative;
