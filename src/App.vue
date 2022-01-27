@@ -29,14 +29,24 @@ export default class App extends Vue {}
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,600;0,800;1,300&display=swap');
+@import "styles/_variables.scss";
+
+body{
+  padding: 0;
+  margin: 0;
+}
 #app {
   font-family: 'Nunito Sans', sans-serif;
 }
-.header-title{
-  padding: 1em 3em;
-  font-weight: 800;
-  font-size: 1.4rem;
+.header {
+  box-shadow: 0.4em 0.4em 0.4em rgba($darkgray-lightMode,0.125);
+  z-index: 2;
+  position: relative;
+  .header-title {
+    padding: 1em 3em;
+    font-weight: 800;
+    font-size: 1.5rem;
+  }
 }
 .body{
 }

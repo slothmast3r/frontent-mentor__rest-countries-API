@@ -52,10 +52,14 @@ export default {
 @import "styles/_variables.scss";
 
 .countries-wrapper{
-  background: $darkgray-lightMode;
   display: flex;
   flex-wrap: wrap;
+  z-index: 0;
+  justify-content: space-between;
   gap: 4em;
+  position: relative;
+  padding: 3em 5em;
+  background: $veryLightGray-lightMode;
 
 }
 

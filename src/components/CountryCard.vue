@@ -1,19 +1,20 @@
 <template>
   <div class="card-wrapper">
     <img :src="country.flags.svg" class="flag-svg" :alt="'Flag: ' + country.name">
-    <div class="title">
-    {{ country.name }}
+    <div class="description__layout">
+      <div class="title">
+      {{ country.name }}
+      </div>
+      <div>
+      Population {{ country.population }}
+      </div>
+      <div>
+      Region {{ country.region }}
+      </div>
+      <div>
+      Capital {{ country.capital }}
+      </div>
     </div>
-    <div>
-    Population {{ country.population }}
-    </div>
-    <div>
-    Region {{ country.region }}
-    </div>
-    <div>
-    Capital {{ country.capital }}
-    </div>
-
   </div>
 
 </template>
@@ -33,20 +34,23 @@ export default {
 <style scoped lang="scss">
 @import "styles/_variables.scss";
 .card-wrapper{
-  font-size: 1rem;
   display: flex;
   flex-direction: column;
   border-radius: 0.5em;
-  background: $veryLightGray-lightMode;
+  background: $white;
 
-  width: 16em;
-  .title{
-    font-size: 1.25em;
-    font-weight: 800;
-  }
+  width: 19em;
+  box-shadow: 0.4em 0.4em 0.4em rgba($darkgray-lightMode,0.125);
   .flag-svg{
-    width: 16em;
+    height: 10em;
     border-radius: 0.5em 0.5em 0 0;
+  }
+  .description__layout {
+    padding: 1em 2em;
+    .title {
+      font-size: 1.2em;
+      font-weight: 800;
+    }
   }
 }
 </style>
