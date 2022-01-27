@@ -1,6 +1,9 @@
 <template>
-  <div style="width: 100px; height: 100px; background: red">
-    {{ country.name }}
+  <div style="background: olive">
+    *title* {{ country.name }}
+    Population {{ country.population }}
+    Region {{ country.region }}
+    Capital {{ country.capital }}
 
   </div>
 
