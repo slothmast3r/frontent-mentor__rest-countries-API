@@ -11,10 +11,10 @@
 
 <script>
 
-import {onMounted, ref, watch} from "vue";
+// import {onMounted, ref, watch} from "vue";
+// import { setup } from 'vue-class-component'
 import { fetchAllCountriesRepository } from "../../scripts/repositories";
 import CountryCard from "@/components/CountryCard";
-import { setup } from 'vue-class-component'
 
 export default {
   name: "CountriesLayout",
